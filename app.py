@@ -3,6 +3,19 @@ import pandas as pd
 import os
 import random
 from google import genai  # Nova biblioteca 2026
+import streamlit as st
+
+# BLINDAGEM CONTRA TRADUÇÃO AUTOMÁTICA
+st.markdown("""
+    <style>
+        .notranslate {
+            translate: no !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Exemplo de uso na Sidebar
+st.sidebar.markdown('<h2 class="notranslate">S.A.I.D.</h2>', unsafe_allow_html=True)
 
 # CONFIGURAÇÃO S.A.I.D. 2026
 # Inicialização S.A.I.D. de Próxima Geração
@@ -82,12 +95,15 @@ if 'db_clientes' not in st.session_state:
 # --- SIDEBAR E SISTEMA DE ACESSO S.A.I.D. ---
 with st.sidebar:
     st.markdown(f"""
-        <div style='text-align: center;'>
-            <h2 style='color: #2ECC71;'>S.A.I.D.</h2>
-            <small>Analytical Intelligence Development</small><br>
-            <strong>MOENDAS ECOPARK</strong>
-        </div>
-    """, unsafe_allow_html=True)
+         <div style='text-align: center;' class='notranslate'>
+             <h2 style='color: #2ECC71; margin-bottom: 0px;'>S.A.I.D.</h2>
+             <p style='font-size: 0.8em; color: #7f8c8d; margin-top: 0px;'>
+                 Analytical Intelligence Development
+             </p>
+             <strong style='color: #2c3e50;'>MOENDAS ECOPARK</strong>
+         </div>
+     """, unsafe_allow_html=True)
+
     
     st.markdown("---")
 
