@@ -19,7 +19,6 @@ st.sidebar.markdown('<h2 class="notranslate">S.A.I.D.</h2>', unsafe_allow_html=T
 
 # CONFIGURAÇÃO S.A.I.D. 2026
 # Inicialização S.A.I.D. de Próxima Geração
-client = genai.Client(api_key="AIzaSyCXT46T5oL3zjxPkJTs0x6hjpFLIEIRGto")
 # Configuração de Estética Premium e Blindagem
 st.set_page_config(page_title="MOENDAS ECOPARK - O Paraíso da Chapada Diamantina", layout="wide")
 # Configuração de Estética Premium e Blindagem
